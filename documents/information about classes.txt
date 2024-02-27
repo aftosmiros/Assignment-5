@@ -1,0 +1,40 @@
+→ Student.java
+·Represents a student entity in the system.
+·Contains attributes such as id, name, surname, age, major.
+·Provides constructors to initialize student objects with and without an ID.
+·Overrides the toString() method to provide a customized string representation of a student object.
+
+→ DatabaseConnection.java
+·Manages the connection to the PostgreSQL database.
+·Implements the IDB interface to provide a method for obtaining a database connection.
+·Uses JDBC to establish and manage the database connection.
+
+→ IDB.java
+·Interface defining a method for obtaining a database connection.
+
+→ StudentController.java
+·Controller class responsible for handling student-related operations.
+·Interacts with the UserRepository to perform CRUD operations on student entities.
+
+→ Main Class.java
+·Acts as the entry point for the application, orchestrating initialization of vital components like database connections, repositories, controllers, and the console manager.
+·Initiates the main menu loop by invoking the startMainMenu() method of the ConsoleMainManager instance.
+
+→ ErrorHandler.java
+·Provides static methods to handle various types of exceptions that may occur in the application, such as SQL exceptions, parse exceptions, and input mismatches.
+
+→ StudentManagementGUI.java
+·GUI class responsible for managing student-related operations through a graphical user interface.
+·Extends the JFrame class to create a window for the application.
+·Contains text fields for inputting student information such as ID, name, surname, age, and major.
+·Includes buttons for performing CRUD operations on student entities: create, update, delete, get, and get all.
+·Utilizes listeners to trigger actions when buttons are clicked.
+·Uses a JTextArea to display results and messages.
+·Provides methods for handling each operation:
+  - createStudent(): Retrieves input values and calls the corresponding method in the StudentController to create a new student. Displays the result in the JTextArea.
+  - updateStudent(): Retrieves input values and calls the corresponding method in the StudentController to update an existing student. Displays the result in the JTextArea.
+  - deleteStudent(): Retrieves input values and calls the corresponding method in the StudentController to delete one or more students. As the delete operation prints the result directly, it does not display it in the JTextArea.
+  - getStudent(): Retrieves input values and calls the corresponding method in the StudentController to retrieve a student by ID. Displays the result in the JTextArea.
+  - getAllStudents(): Calls the corresponding method in the StudentController to retrieve all students. Displays the result in the JTextArea or a message if no students are found.
+·Requires a StudentController instance to perform student operations.
+·Creates and manages the graphical components for user interaction, facilitating student management through the GUI.
