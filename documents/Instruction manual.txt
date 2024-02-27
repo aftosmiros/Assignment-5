@@ -1,0 +1,15 @@
+Instruction manual for the programme.
+
+To create a new record in the database:
+Enter data in the Name, Surname, Age, Major fields and click the "Create Student" button. There is no need to enter the ID as it will be created automatically.
+
+To update a new record in the database:
+Enter the student ID in the ID field, the table column name in the Column (name, surname, age, major) field, enter the new data in the Value field and click "Update Student".
+
+To retrieve a student record, enter the student's ID in the ID field and click the "Get Student" button.
+
+To get all records from the database, click on the "Get All Students" button.
+
+To delete one record or more, enter student IDs (separated by commas) in the Delete IDs field and click the "Delete Student" button.
+
+Always pay attention to the output window. All programme errors are displayed there.
